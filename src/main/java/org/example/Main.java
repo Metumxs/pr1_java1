@@ -83,11 +83,11 @@ public class Main
                 case 5:
                     System.out.println("Введіть ID товару для видалення:");
 
-                    int idToRemove = scanner.nextInt();
+                    int idProductToRemove = scanner.nextInt();
                     Product productToRemove = null;
                     for (Product product : cart.getProducts())
                     {
-                        if (product.getId() == idToRemove)
+                        if (product.getId() == idProductToRemove)
                         {
                             productToRemove = product;
                             break;
@@ -124,18 +124,18 @@ public class Main
                     System.out.println("Введіть назву або категорію для пошуку:");
                     scanner.nextLine();
                     String query = scanner.nextLine().toLowerCase();
-                    boolean isFound = false;
+                    boolean isProductFound = false;
                     for (Product product : productsCatalog)
                     {
                         if (product.getName().toLowerCase().contains(query) ||
                                 product.getCategory().getName().toLowerCase().contains(query))
                         {
                             System.out.println(product);
-                            isFound = true;
+                            isProductFound = true;
                         }
                     }
 
-                    if (!isFound)
+                    if (!isProductFound)
                     {
                         System.out.println("Товарів за запитом не знайдено.");
                     }
