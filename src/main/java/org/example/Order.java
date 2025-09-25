@@ -17,7 +17,7 @@ public class Order
     // Конструктор
     public Order(Cart cart)
     {
-        this.products = new ArrayList<>(cart.getProducts()); // Копіювання товарів з кошика в список товарів замовлення
+        this.products = cart.getProducts(); // Копіювання товарів з кошика в список товарів замовлення
         this.totalPrice = cart.getTotalPrice();
         this.status = "Нове"; // Стандартний статус при створенні замовлення
     }

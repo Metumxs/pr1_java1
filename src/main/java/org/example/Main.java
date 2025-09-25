@@ -73,10 +73,10 @@ public class Main
                     else
                     {
                         Order order = new Order(cart);
-                        orderHistory.add(order); // Додаємо замовлення в історію замовлень
+                        orderHistory.add(order);
                         System.out.println("Замовлення оформлено:");
                         System.out.println(order);
-                        cart.clear(); // Метод для очищення кошика, який потрібно реалізувати в класі Cart
+                        cart.clear();
                     }
                     break;
 
